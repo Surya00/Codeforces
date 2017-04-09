@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+
+int main()
+       {
+	   ll t,i,j,k,l,n,m,dif,min,max,a,b;
+	    cin>>t;    
+	for (i = 0; i <t; i++)
+	 {
+	    cin>>n;
+        vector< pair<int,int> > v;
+      //  vector< pair<int,int> > :: iterator it;
+        for (j = 0; j<n; j++)
+        {
+            cin>>a;
+            cin>>b;
+            v.push_back(make_pair(b,a));   
+        }
+        sort(v.begin(),v.end());
+          // k= *(v.begin()).second;
+            k= v[0].first;
+         max=1;
+        for (/*it= v.begin();  it!=v.end(); it++*/ j=0; j<n; j++)
+        {
+           if(v[j].second>=k){
+            k= v[j].first;
+             max++;
+           }  
+        }
+        cout<<max<<"\n";
+
+	}
+ 
+ // v.push_back(make_pair())
+  //sort(v.begin(),v.end());
+    return 0;
+}
